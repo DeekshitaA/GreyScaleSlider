@@ -19,7 +19,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func doSomething() {
+        print("It Works!")
+        view.backgroundColor = UIColor.purpleColor()
+    }
 
-
+    @IBAction func sliderDidChangeValue(sender: UISlider) {
+        print(sender.value)
+        view.backgroundColor = UIColor(white: CGFloat(sender.value), alpha: 1)
+    }
 }
 
